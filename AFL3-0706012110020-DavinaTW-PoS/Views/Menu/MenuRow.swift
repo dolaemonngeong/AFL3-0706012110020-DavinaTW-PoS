@@ -63,6 +63,8 @@ struct MenuRow: View {
                             modelData.items.append(newItem)
                         }
                         quantity = 0
+                        modelData.total += Int(menu.priceMenu)! * quantity
+//                        total += Int(price)! * amountMenuInt
                     }
                     .padding(15)
                 }

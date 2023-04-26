@@ -8,25 +8,39 @@
 import SwiftUI
 
 struct ShoppingCartView: View {
-//    var shopcart: ShoppingCart
+    //    var shopcart: ShoppingCart
     @EnvironmentObject var modelData: ModelData
     var body: some View {
         VStack {
-            Text("ini shop cart")
-                .font(.headline)
+            //            Text("ini shop cart")
+            //                .font(.headline)
             CartList()
-
+            HStack{
+                VStack {
+                    Text("Total: ")
+                        .font(.title)
+                        .fontWeight(.heavy)
+                    .padding(.leading, 20)
+                    Text("Rp. \(modelData.total)")
+                }
+                Spacer()
+                Button("payment"){
+                    
+                }
+                .padding(.trailing, 20)
+            }
+            .padding(.bottom, 25)
+            
+            
         }
         .navigationTitle("Shopping Cart")
-//        .foregroundColor(.gray)
+        //        .foregroundColor(.gray)
     }
 }
 
 struct ShoppingCartView_Previews: PreviewProvider {
     static var previews: some View {
         ShoppingCartView()
-            .background(Color(hue: 0.688, saturation: 0.103, brightness: 0.807))
-            .previewLayout(.fixed(width: 400, height: 100))
             .environmentObject(ModelData())
     }
 }

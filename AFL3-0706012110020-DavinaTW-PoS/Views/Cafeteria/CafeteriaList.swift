@@ -19,6 +19,7 @@ struct CafeteriaList: View {
                     CafeteriaRow(cafeteria: cafeteria)
                 }
             }
+            .navigationTitle("UC-Walk")
         }
     }
 }

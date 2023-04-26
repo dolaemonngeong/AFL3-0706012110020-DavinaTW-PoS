@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct CartCard: View {
-//    var shopcart: ShoppingCart
+    @EnvironmentObject var modelData : ModelData
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Nama Tenant")
-                .font(.title)
-            .fontWeight(.bold)
-
-            Text("Menunya x jumlah")
+            ForEach(modelData.items) { item in
+                VStack(alignment: .leading) {
+                    Text(item.cafeteria.name)
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Text("\(item.menu.nameMenu) x \(item.quantity)")
+                }
+            }
         }
         
     }

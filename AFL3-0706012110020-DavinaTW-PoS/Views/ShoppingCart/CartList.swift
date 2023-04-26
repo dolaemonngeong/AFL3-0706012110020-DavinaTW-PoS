@@ -13,6 +13,7 @@ struct CartList: View {
     var body: some View {
         List(){
             CartCard()
+                .padding(10)
         }
     }
 }

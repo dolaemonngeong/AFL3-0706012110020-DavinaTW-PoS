@@ -8,6 +8,7 @@
 import Foundation
 
 final class ModelData: ObservableObject{
+    @Published var total:Int = 0
     @Published var items: [Item] = []
     @Published var cafeterias: [Cafeteria]
     
