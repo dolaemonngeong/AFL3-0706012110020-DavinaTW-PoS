@@ -17,7 +17,8 @@ struct CafeteriaRow: View {
                 .resizable()
                 .frame(width: 100, height: 100)
             Text(cafeteria.name)
-                .font(.headline)
+                .font(.title)
+                .fontWeight(.bold)
         }
     }
 }
@@ -25,5 +26,6 @@ struct CafeteriaRow: View {
 struct CafeteriaRow_Previews: PreviewProvider {
     static var previews: some View {
         CafeteriaRow(cafeteria: ModelData().cafeterias[0])
+            .environmentObject(ModelData())
     }
 }

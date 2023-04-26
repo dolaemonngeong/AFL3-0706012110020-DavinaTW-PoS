@@ -10,40 +10,46 @@ import SwiftUI
 struct MenuList: View {
     var cafeteria: Cafeteria
     
+    @EnvironmentObject var modelData: ModelData
+    
     var body: some View {
         //  menampilkan tumpukan tampilan yang mewakili jalur yang terlihat dalam hierarki navigasi
-        NavigationView {
-            
-//            // menampilkan seluruh list data
-//            List(selection: $selectedLandmark){
-//
-//
-//                //  navigasi ke detail dari landmark yang diklik pengguna
-//                ForEach(filteredLandmarks) { landmark in
-//                    NavigationLink{
-//                        LandmarkDetail(landmark: landmark)
-//                    } label: {
-//                        LandmarkRow(landmark: landmark)
-//                    }
-//
-//                    // mempermudah pengambilan landmark yang dipilih
-//                    .tag(landmark)
-//                }
-//            }
-            
-            // menampilkan judul pada navigation bar
-//            .navigationTitle(title)
-            
-            // mengatur minimum lebar frame
-//            .frame(minWidth: 300)
-            
-        }
+        //        NavigationView {
+        //            List(ModelData().cafeterias, id: \.id) { cafeteria in
+        //                NavigationLink {
+        //                    Text("a")
+        //                } label: {
+        //                    MenuRow(cafeteria: ModelData().cafeterias[0])
+        //                }
+        //            }
+        //            //                ForEach(cafeteria.menu) { menu in
+        //            //                    MenuRow(menu)
+        //            //                    HStack{
+        //            //                        Image("photography")
+        //            //                            .resizable()
+        //            //                            .frame(width: 100, height: 100)
+        //            //                        VStack(alignment: .leading) {
+        //            //                            Text(menu.nameMenu)
+        //            //                                .font(.headline)
+        //            //                            Text("Rp \(menu.priceMenu)")
+        //            //                                .font(.subheadline)
+        //            //                        }
+        //            //                    }
+        //        }
         
+        //        NavigationView {
+        List(cafeteria.menu, id: \.id) { menu in
+            //                NavigationLink(destination: Text("Order Details")) {
+            MenuRow(menu: menu, cafeteria: cafeteria)
+            //                }
+        }
+        //            .navigationTitle("Menu List")
     }
+    
 }
 
 struct MenuList_Previews: PreviewProvider {
     static var previews: some View {
-        MenuList(cafeteria: ModelData().cafeterias[0])
+        MenuList(cafeteria: ModelData().cafeterias[0]).environmentObject(ModelData())
     }
 }

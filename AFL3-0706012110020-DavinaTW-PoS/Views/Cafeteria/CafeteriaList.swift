@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CafeteriaList: View {
+    @EnvironmentObject var modelData: ModelData
+    
     var body: some View {
         NavigationView{
             List(ModelData().cafeterias, id: \.id) { cafeteria in
@@ -24,5 +26,6 @@ struct CafeteriaList: View {
 struct CafeteriaList_Previews: PreviewProvider {
     static var previews: some View {
         CafeteriaList()
+            .environmentObject(ModelData())
     }
 }

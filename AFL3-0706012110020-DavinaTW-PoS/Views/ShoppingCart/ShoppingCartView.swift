@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ShoppingCartView: View {
+//    var shopcart: ShoppingCart
+    @EnvironmentObject var modelData: ModelData
     var body: some View {
         VStack {
             Text("ini shop cart")
                 .font(.headline)
+            CartList()
 
         }
         .navigationTitle("Shopping Cart")
@@ -24,5 +27,6 @@ struct ShoppingCartView_Previews: PreviewProvider {
         ShoppingCartView()
             .background(Color(hue: 0.688, saturation: 0.103, brightness: 0.807))
             .previewLayout(.fixed(width: 400, height: 100))
+            .environmentObject(ModelData())
     }
 }

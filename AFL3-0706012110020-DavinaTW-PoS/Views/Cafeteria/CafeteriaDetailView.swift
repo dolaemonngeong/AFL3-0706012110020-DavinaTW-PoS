@@ -10,9 +10,12 @@ import SwiftUI
 struct CafeteriaDetailView: View {
     var cafeteria: Cafeteria
     
+    @EnvironmentObject var modelData: ModelData
     
     var body: some View {
-        Text(cafeteria.menu[0].nameMenu)
+        MenuList(cafeteria: cafeteria)
+        
+//        Text(cafeteria.menu[0].nameMenu)
             .navigationBarTitle(cafeteria.name)
     }
 }
@@ -20,5 +23,6 @@ struct CafeteriaDetailView: View {
 struct CafeteriaDetailView_Previews: PreviewProvider {
     static var previews: some View {
         CafeteriaDetailView(cafeteria: ModelData().cafeterias[0])
+            .environmentObject(ModelData())
     }
 }
