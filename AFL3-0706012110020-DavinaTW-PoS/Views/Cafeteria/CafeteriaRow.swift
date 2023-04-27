@@ -9,13 +9,19 @@ import SwiftUI
 
 struct CafeteriaRow: View {
     
+// menam
     var cafeteria: Cafeteria
     
     var body: some View {
+        
         HStack{
+            
+            // menampilkan gambar yang diambil di asset
             Image("photography")
                 .resizable()
                 .frame(width: 100, height: 100)
+            
+            // menampilkan nama tenant
             Text(cafeteria.name)
                 .font(.title)
                 .fontWeight(.bold)

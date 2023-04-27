@@ -8,18 +8,26 @@
 import SwiftUI
 
 struct CafeteriaList: View {
+    // property untuk membuat view yang bergantung pada data bersama
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
+        
         NavigationView{
+            
+            // menampilkan seluruh nama Tenant
             List(ModelData().cafeterias, id: \.id) { cafeteria in
+                
+                // navigasi ke detail tenant dengan memanggil struct CafeteriaDetailView
                 NavigationLink {
                     CafeteriaDetailView(cafeteria: cafeteria)
                 } label: {
+                    // menampikan card nama tenant
                     CafeteriaRow(cafeteria: cafeteria)
                 }
+                
             }
-//            .navigationTitle("UC-Walk")
+            
         }
     }
 }

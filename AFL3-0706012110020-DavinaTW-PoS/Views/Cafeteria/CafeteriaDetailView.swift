@@ -10,14 +10,16 @@ import SwiftUI
 struct CafeteriaDetailView: View {
     var cafeteria: Cafeteria
     
+    // property untuk membuat view yang bergantung pada data bersama
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
-        MenuList(cafeteria: cafeteria)
         
-//        Text(cafeteria.menu[0].nameMenu)
+        // menampilkan seluruh menu dalam suatu cafeteria
+        MenuList(cafeteria: cafeteria)
             .navigationBarTitle(cafeteria.name)
     }
+    
 }
 
 struct CafeteriaDetailView_Previews: PreviewProvider {

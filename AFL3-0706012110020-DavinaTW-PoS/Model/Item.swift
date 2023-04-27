@@ -1,5 +1,5 @@
 //
-//  ShoppingCart.swift
+//  Item.swift
 //  AFL3-0706012110020-DavinaTW-PoS
 //
 //  Created by MacBook Pro on 26/04/23.
@@ -7,6 +7,7 @@
 
 import Foundation
 
+// untuk item yang dipesan pengguna dimana menggunakan protocol Identifiable dan ObservableObject
 class Item: Identifiable, ObservableObject {
     let id = UUID()
     var menu: Menu

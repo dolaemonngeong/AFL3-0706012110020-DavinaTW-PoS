@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ShoppingCartView: View {
-    //    var shopcart: ShoppingCart
+    
     @EnvironmentObject var modelData: ModelData
+    
     var body: some View {
         NavigationView{
             VStack {
                 
+                // jika array items kosong, maka menampilkan tulisan "Your cart is empty :(". Jika sebaliknya, panggil struct CartList() yang menampilkan seluruh pesanan pengguna
                 if(modelData.items.isEmpty){
                     Text("Your cart is empty :(")
+                        .padding(.vertical, 320.0)
                 }else{
                     CartList()
                 }
@@ -25,12 +28,16 @@ struct ShoppingCartView: View {
                         Text("Total: ")
                             .font(.title)
                             .fontWeight(.heavy)
+                        
+                        // menampilkan total pesanan pengguna
                         Text("Rp. \(modelData.total)")
                     }
                     .padding(.leading, 20)
                     
+                    // memberi jarak antara total dan tombol "CheckOut
                     Spacer()
                     
+                    // jika total pesanannya lebih dari 0, maka tampilkan tombol checkout
                     if(modelData.total > 0){
                         NavigationLink(destination: CheckoutView()){
                             Text("Checkout")
@@ -50,8 +57,8 @@ struct ShoppingCartView: View {
             }
         }
         
+        // memberi judul navigasi
         .navigationTitle("Shopping Cart")
-        //        .foregroundColor(.gray)
     }
 }
 

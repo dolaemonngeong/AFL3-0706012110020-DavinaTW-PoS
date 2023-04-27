@@ -11,27 +11,20 @@ struct CartCard: View {
     @EnvironmentObject var modelData : ModelData
     
     var body: some View {
+        
         VStack(alignment: .leading) {
-            
-            //            ForEach(modelData.items) { item in
-            //                VStack(alignment: .leading) {
-            //                    Text(item.cafeteria.name)
-            //                        .font(.title)
-            //                        .fontWeight(.bold)
-            //                    ForEach(modelData.items){ menu in
-            //                        Text("\(menu.menu.nameMenu) @\(menu.menu.priceMenu) x \(menu.quantity)")
-            //                    }
-            //                }
-            //            }
-            
+            // memanggil fucntion generateOrderViews yang menampilkan seluruh pesanan pengguna
             generateOrderViews()
             
         }
         
     }
     private func generateOrderViews() -> some View {
+        
+        // mengelompokkan array items berdasarkan nama cafeteria
         let groupedItems = Dictionary(grouping: modelData.items, by: { $0.cafeteria.name })
         
+        // mengembalikan value yang menampilkan nama cafeteria di atas dan pesanan menunya di bawah
         return ForEach(groupedItems.keys.sorted(), id: \.self) { cafeteria in
             VStack(alignment: .leading) {
                 Text("\(cafeteria):")
@@ -42,7 +35,9 @@ struct CartCard: View {
                 }
             }
         }
+        
     }
+    
 }
 
 struct CartCard_Previews: PreviewProvider {

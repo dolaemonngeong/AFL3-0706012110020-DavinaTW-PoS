@@ -22,7 +22,7 @@
 		047CABA029F94BC0005CF41D /* CartCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CAB9F29F94BC0005CF41D /* CartCard.swift */; };
 		047CABA229F94D26005CF41D /* CartList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CABA129F94D26005CF41D /* CartList.swift */; };
 		047CABA829F955C1005CF41D /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CABA729F955C1005CF41D /* MenuRow.swift */; };
-		047CABAC29F95FE4005CF41D /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CABAB29F95FE4005CF41D /* ShoppingCart.swift */; };
+		047CABAC29F95FE4005CF41D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CABAB29F95FE4005CF41D /* Item.swift */; };
 		04D2F30F29FA080800CCCBD6 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2F30E29FA080800CCCBD6 /* CheckoutView.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,7 @@
 		047CAB9F29F94BC0005CF41D /* CartCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCard.swift; sourceTree = "<group>"; };
 		047CABA129F94D26005CF41D /* CartList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartList.swift; sourceTree = "<group>"; };
 		047CABA729F955C1005CF41D /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
-		047CABAB29F95FE4005CF41D /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		047CABAB29F95FE4005CF41D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		04D2F30E29FA080800CCCBD6 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +112,7 @@
 				045E214829F793EA00D85EA2 /* Menu.swift */,
 				045E214E29F7A78A00D85EA2 /* Cafeteria.swift */,
 				047CAB9D29F8E3FD005CF41D /* ModelData.swift */,
-				047CABAB29F95FE4005CF41D /* ShoppingCart.swift */,
+				047CABAB29F95FE4005CF41D /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,7 +238,7 @@
 				047CABA029F94BC0005CF41D /* CartCard.swift in Sources */,
 				045E214F29F7A78A00D85EA2 /* Cafeteria.swift in Sources */,
 				045E214D29F7A48B00D85EA2 /* MenuList.swift in Sources */,
-				047CABAC29F95FE4005CF41D /* ShoppingCart.swift in Sources */,
+				047CABAC29F95FE4005CF41D /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

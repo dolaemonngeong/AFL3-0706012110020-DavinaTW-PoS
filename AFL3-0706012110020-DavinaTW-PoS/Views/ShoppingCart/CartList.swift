@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct CartList: View {
-//    var shopcart: ShoppingCart
     
     var body: some View {
+        // menampilkan seluruh card
         List(){
+            // memanggil struct CartCard()
             CartCard()
                 .padding(10)
         }

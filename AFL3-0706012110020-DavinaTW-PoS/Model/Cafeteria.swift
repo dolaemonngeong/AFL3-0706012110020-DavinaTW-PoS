@@ -6,7 +6,6 @@
 //
 
 import Foundation
-//var cafeterias: [Cafeteria]
 
 class Cafeteria{
     var id: Int

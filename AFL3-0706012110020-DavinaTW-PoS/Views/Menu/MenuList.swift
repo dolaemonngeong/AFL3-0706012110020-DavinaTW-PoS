@@ -8,42 +8,19 @@
 import SwiftUI
 
 struct MenuList: View {
+    // menambah property MenuList yakni cafeteria
     var cafeteria: Cafeteria
     
     @EnvironmentObject var modelData: ModelData
     
     var body: some View {
-        //  menampilkan tumpukan tampilan yang mewakili jalur yang terlihat dalam hierarki navigasi
-        //        NavigationView {
-        //            List(ModelData().cafeterias, id: \.id) { cafeteria in
-        //                NavigationLink {
-        //                    Text("a")
-        //                } label: {
-        //                    MenuRow(cafeteria: ModelData().cafeterias[0])
-        //                }
-        //            }
-        //            //                ForEach(cafeteria.menu) { menu in
-        //            //                    MenuRow(menu)
-        //            //                    HStack{
-        //            //                        Image("photography")
-        //            //                            .resizable()
-        //            //                            .frame(width: 100, height: 100)
-        //            //                        VStack(alignment: .leading) {
-        //            //                            Text(menu.nameMenu)
-        //            //                                .font(.headline)
-        //            //                            Text("Rp \(menu.priceMenu)")
-        //            //                                .font(.subheadline)
-        //            //                        }
-        //            //                    }
-        //        }
         
-        //        NavigationView {
+        // menampilkan seluruh card Menu pada sebuah cafeteria
         List(cafeteria.menu, id: \.id) { menu in
-            //                NavigationLink(destination: Text("Order Details")) {
+            // memanggil struct MenuRow yang menyesuaikan cafeteria dan menu yang ditekan pengguna di CafeteriaList
             MenuRow(menu: menu, cafeteria: cafeteria)
-            //                }
         }
-        //            .navigationTitle("Menu List")
+        
     }
     
 }

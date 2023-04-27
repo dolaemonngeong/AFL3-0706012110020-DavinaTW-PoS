@@ -8,20 +8,26 @@
 import Foundation
 
 final class ModelData: ObservableObject{
-    var total:Int = 0
+    @Published var total:Int = 0
+    
+    // array yang berisi objek item
     @Published var items: [Item] = []
+    
+    // array yang berisi objek cafeteria
     @Published var cafeterias: [Cafeteria]
     
+    // fungtion untuk menghitung total keseluruhan pesanan pengguna
     func calculateOrder(price:String, amount:Int){
         total += Int(price)! * amount
     }
     
+    // fungtion untuk menghapus seluruh array items
     func finishOrder(){
         items.removeAll()
         total = 0
     }
-//    let groupedItems = Dictionary(grouping: items, by: { $0.cafeteria.name })
     
+    // membuat objek cafeteria secara default
     init() {
         let tuku2 = Cafeteria(id: 1, name: "Tuku-tuku", menu: [
             Menu(nameMenu: "Tahu Isi", priceMenu: "5000"),
