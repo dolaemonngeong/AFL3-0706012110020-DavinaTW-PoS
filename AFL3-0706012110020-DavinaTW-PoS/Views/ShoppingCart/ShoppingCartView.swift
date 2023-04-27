@@ -11,28 +11,38 @@ struct ShoppingCartView: View {
     //    var shopcart: ShoppingCart
     @EnvironmentObject var modelData: ModelData
     var body: some View {
-        VStack {
-            //            Text("ini shop cart")
-            //                .font(.headline)
-            CartList()
-            HStack{
-                VStack {
-                    Text("Total: ")
-                        .font(.title)
-                        .fontWeight(.heavy)
-                    .padding(.leading, 20)
-                    Text("Rp. \(modelData.total)")
+        NavigationView{
+            VStack {
+                //            Text("ini shop cart")
+                //                .font(.headline)
+                CartList()
+                
+                HStack{
+                    VStack {
+                        Text("Total: ")
+                            .font(.title)
+                            .fontWeight(.heavy)
+                            .padding(.leading, 20)
+                        Text("Rp. \(modelData.total)")
+                    }
+                    Spacer()
+                    NavigationLink(destination: CheckoutView()){
+                        Text("Checkout")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .frame(width: 120, height: .infinity)
+                            .background(Color.black)
+                            .cornerRadius(10)
+                    }
+                    .padding(.trailing, 20)
                 }
-                Spacer()
-                Button("payment"){
-                    
-                }
-                .padding(.trailing, 20)
+                .padding(.bottom, 25)
+                
+                
             }
-            .padding(.bottom, 25)
-            
-            
         }
+        
         .navigationTitle("Shopping Cart")
         //        .foregroundColor(.gray)
     }

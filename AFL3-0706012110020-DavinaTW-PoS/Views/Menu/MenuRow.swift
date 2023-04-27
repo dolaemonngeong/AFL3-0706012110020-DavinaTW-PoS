@@ -45,16 +45,19 @@ struct MenuRow: View {
                 //                    }
                 
                 //                                buat cek
-//                                ForEach(modelData.items) { item in
-//                                    HStack {
-//                                        Text("ID: \(item.id)")
-//                                        Text("Menu: \(item.menu.nameMenu)")
-//                                        Text("Cafeteria: \(item.cafeteria.name)")
-//                                        Text("Quantity: \(item.quantity)")
-//                                    }
-//                                }
+                                ForEach(modelData.items) { item in
+                                    HStack {
+                                        Text("ID: \(item.id)")
+                                        Text("Menu: \(item.menu.nameMenu)")
+                                        Text("Cafeteria: \(item.cafeteria.name)")
+                                        Text("Quantity: \(item.quantity)")
+                                    }
+                                }
+                
                 if(quantity > 0){
+                    
                     Divider()
+                    
                     Button("Add to Cart") {
                         let newItem = Item(menu: menu, cafeteria: cafeteria, quantity: quantity)
                         if let index = modelData.items.firstIndex(where: { $0.menu.nameMenu == menu.nameMenu && $0.cafeteria.name == cafeteria.name }) {
@@ -64,9 +67,10 @@ struct MenuRow: View {
                         }
                         quantity = 0
                         modelData.total += Int(menu.priceMenu)! * quantity
-//                        total += Int(price)! * amountMenuInt
+                        
                     }
                     .padding(15)
+                    
                 }
             }
             
