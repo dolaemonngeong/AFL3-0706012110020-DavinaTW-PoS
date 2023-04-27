@@ -13,29 +13,36 @@ struct ShoppingCartView: View {
     var body: some View {
         NavigationView{
             VStack {
-                //            Text("ini shop cart")
-                //                .font(.headline)
-                CartList()
+                
+                if(modelData.items.isEmpty){
+                    Text("Your cart is empty :(")
+                }else{
+                    CartList()
+                }
                 
                 HStack{
-                    VStack {
+                    VStack(alignment: .leading) {
                         Text("Total: ")
                             .font(.title)
                             .fontWeight(.heavy)
-                            .padding(.leading, 20)
                         Text("Rp. \(modelData.total)")
                     }
+                    .padding(.leading, 20)
+                    
                     Spacer()
-                    NavigationLink(destination: CheckoutView()){
-                        Text("Checkout")
-                            .font(.headline)
-                            .foregroundColor(.white)
-                            .padding()
-                            .frame(width: 120, height: .infinity)
-                            .background(Color.black)
-                            .cornerRadius(10)
+                    
+                    if(modelData.total > 0){
+                        NavigationLink(destination: CheckoutView()){
+                            Text("Checkout")
+                                .font(.headline)
+                                .foregroundColor(.white)
+                                .padding()
+                                .frame(width: 120, height: .infinity)
+                                .background(Color.black)
+                                .cornerRadius(10)
+                        }
+                        .padding(.trailing, 20)
                     }
-                    .padding(.trailing, 20)
                 }
                 .padding(.bottom, 25)
                 

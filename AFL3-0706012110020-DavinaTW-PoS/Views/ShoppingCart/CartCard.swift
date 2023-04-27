@@ -38,7 +38,7 @@ struct CartCard: View {
                     .font(.title)
                     .fontWeight(.bold)
                 ForEach(groupedItems[cafeteria]!) { item in
-                    Text("- \(item.menu.nameMenu) @\(item.menu.priceMenu) x\(item.quantity)")
+                    Text(" - \(item.menu.nameMenu) @\(item.menu.priceMenu) x\(item.quantity)")
                 }
             }
         }

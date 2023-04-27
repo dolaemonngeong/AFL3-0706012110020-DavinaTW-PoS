@@ -45,14 +45,14 @@ struct MenuRow: View {
                 //                    }
                 
                 //                                buat cek
-                                ForEach(modelData.items) { item in
-                                    HStack {
-                                        Text("ID: \(item.id)")
-                                        Text("Menu: \(item.menu.nameMenu)")
-                                        Text("Cafeteria: \(item.cafeteria.name)")
-                                        Text("Quantity: \(item.quantity)")
-                                    }
-                                }
+//                                ForEach(modelData.items) { item in
+//                                    HStack {
+//                                        Text("ID: \(item.id)")
+//                                        Text("Menu: \(item.menu.nameMenu)")
+//                                        Text("Cafeteria: \(item.cafeteria.name)")
+//                                        Text("Quantity: \(item.quantity)")
+//                                    }
+//                                }
                 
                 if(quantity > 0){
                     
@@ -66,7 +66,7 @@ struct MenuRow: View {
                             modelData.items.append(newItem)
                         }
                         quantity = 0
-                        modelData.total += Int(menu.priceMenu)! * quantity
+                        calculateOrder()
                         
                     }
                     .padding(15)
@@ -75,6 +75,10 @@ struct MenuRow: View {
             }
             
         }
+    }
+    
+    private func calculateOrder() {
+        modelData.total += Int(menu.priceMenu)! * quantity
     }
     
 }
