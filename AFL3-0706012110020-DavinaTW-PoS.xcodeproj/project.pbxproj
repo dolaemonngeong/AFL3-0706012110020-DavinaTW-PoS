@@ -24,7 +24,6 @@
 		047CABA829F955C1005CF41D /* MenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CABA729F955C1005CF41D /* MenuRow.swift */; };
 		047CABAC29F95FE4005CF41D /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047CABAB29F95FE4005CF41D /* ShoppingCart.swift */; };
 		04D2F30F29FA080800CCCBD6 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2F30E29FA080800CCCBD6 /* CheckoutView.swift */; };
-		04D2F31129FA081700CCCBD6 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2F31029FA081700CCCBD6 /* SuccessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +45,6 @@
 		047CABA729F955C1005CF41D /* MenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRow.swift; sourceTree = "<group>"; };
 		047CABAB29F95FE4005CF41D /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		04D2F30E29FA080800CCCBD6 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
-		04D2F31029FA081700CCCBD6 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +58,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		045E215029F7ABAF00D85EA2 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		0461083229F726BC0069DB75 = {
 			isa = PBXGroup;
 			children = (
@@ -86,7 +77,6 @@
 		0461083D29F726BC0069DB75 /* AFL3-0706012110020-DavinaTW-PoS */ = {
 			isa = PBXGroup;
 			children = (
-				045E215029F7ABAF00D85EA2 /* ViewModel */,
 				0461085229F730300069DB75 /* Model */,
 				0461084F29F72B560069DB75 /* Views */,
 				0461083E29F726BC0069DB75 /* AFL3_0706012110020_DavinaTW_PoSApp.swift */,
@@ -160,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				04D2F30E29FA080800CCCBD6 /* CheckoutView.swift */,
-				04D2F31029FA081700CCCBD6 /* SuccessView.swift */,
 			);
 			path = Payment;
 			sourceTree = "<group>";
@@ -235,7 +224,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04D2F31129FA081700CCCBD6 /* SuccessView.swift in Sources */,
 				045E214929F793EA00D85EA2 /* Menu.swift in Sources */,
 				047CABA829F955C1005CF41D /* MenuRow.swift in Sources */,
 				04D2F30F29FA080800CCCBD6 /* CheckoutView.swift in Sources */,

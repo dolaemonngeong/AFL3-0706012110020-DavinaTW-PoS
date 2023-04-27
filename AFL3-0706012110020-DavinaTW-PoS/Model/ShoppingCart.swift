@@ -7,18 +7,6 @@
 
 import Foundation
 
-
-
-class ShoppingCart: ObservableObject {
-    static let shared = ShoppingCart()
-    
-    @Published var items = [Item]()
-    
-    func addItem(_ item: Item) {
-        items.append(item)
-    }
-}
-
 class Item: Identifiable, ObservableObject {
     let id = UUID()
     var menu: Menu

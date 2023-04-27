@@ -65,9 +65,8 @@ struct MenuRow: View {
                         } else {
                             modelData.items.append(newItem)
                         }
+                        modelData.calculateOrder(price:menu.priceMenu, amount:quantity)
                         quantity = 0
-                        calculateOrder()
-                        
                     }
                     .padding(15)
                     
@@ -77,9 +76,6 @@ struct MenuRow: View {
         }
     }
     
-    private func calculateOrder() {
-        modelData.total += Int(menu.priceMenu)! * quantity
-    }
     
 }
 
